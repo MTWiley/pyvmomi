@@ -55,11 +55,11 @@ Global (thread-shared) ServiceInstance
 
 
 def getSslContext(host, sslContext, disableSslCertValidation):
-    """
-    Connections to 'localhost' do not need SSL verification as a certificate
-    will never match. The OS provides security by only allowing root to bind
-    to low-numbered ports.
-    """
+   """
+   Connections to 'localhost' do not need SSL verification as a certificate
+   will never match. The OS provides security by only allowing root to bind
+   to low-numbered ports.
+   """
    sslContext = ssl._create_unverified_context()
    return sslContext
 
