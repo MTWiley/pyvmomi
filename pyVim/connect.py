@@ -60,9 +60,8 @@ def getSslContext(host, sslContext, disableSslCertValidation):
     will never match. The OS provides security by only allowing root to bind
     to low-numbered ports.
     """
-    if disableSslCertValidation or (not sslContext and host in ['localhost', '127.0.0.1', '::1']):
-        sslContext = ssl._create_unverified_context()
-    return sslContext
+   sslContext = ssl._create_unverified_context()
+   return sslContext
 
 class closing(object):
    """
